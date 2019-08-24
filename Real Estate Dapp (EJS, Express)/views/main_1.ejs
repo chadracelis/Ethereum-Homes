@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  
+  <% include partials/head.ejs %>
+
+</head>
+<body>
+  
+<br>
+
+<!-- INITIAL SCREEN -->
+<div id="initID">
+    <div id="loaderID" class="loader"></div>
+    <ul id="initialStatusID"></ul>
+</div>
+
+<!-- MAIN SCREEN AFTER METAMASK INFO LOADED -->
+<div id="main" class="container-fluid">
+    <div class="row">
+        <div class="col-10 offset-1" style="background-color: #F9EAC9">                
+            <h1 class="text-center" style="font-family: 'Times New Roman', Times, serif; font-weight:600">Ethereum Homes</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 offset-1" style="background-color:#DBBD91">                
+            <% include partials/components/landlist.ejs %>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-8 offset-1" style="background-color:  #F9EAC9; height:175px;">
+            <% include partials/components/operations.ejs %>
+        </div>
+        <div class="col-2" style="background-color:  #F9EAC9; height:175px;">
+            <br>
+            <div id="loaderID2" class="loader"></div>
+        </div>        
+    </div>
+    
+    <div class="row">
+        <div class="col-10 offset-1" style="background-color: #F9EAC9; height:200px;">
+            <% include partials/components/status.ejs %>
+            <div class="row">
+            <p class="col-6"><small>Created by <a href="https://www.github.com/cchadwwick" target="_blank">Chad Racelis</a></small></p>
+            <p class="col-6 text-right"><small><a href="https://github.com/parthi2929/a-basic-real-estate-dapp" target="_blank">Github</a></small></p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<% include partials/jsincludes.ejs %>
+
+<script src="/js/arrive.min.js"></script>
+<script src="/js/config.js"></script>
+<script src="/js/init.js"></script>
+<script src="/js/loadLands.js"></script>
+<script src="/js/operations.js"></script>
+</body>
+</html>
