@@ -4,7 +4,7 @@ import LandsForSale from './LandsForSale';
 import ListLand from './ListLand';
 import SoldLands from './SoldLands';
 
-export class Main extends Component {
+export class Content extends Component {
 
   render() {
     return (
@@ -12,7 +12,7 @@ export class Main extends Component {
         <p></p>
         <AddLand addLand={this.props.addLand} />
         <p>&nbsp;</p>
-        <LandsForSale lands={this.props.lands} buyLand={this.props.buyLand} />
+        <LandsForSale lands={this.props.lands} buyLand={this.props.buyLand} account={this.props.account} />
         <p>&nbsp;</p>
         <ListLand listLand={this.props.listLand} />
         <p>&nbsp;</p>
@@ -22,4 +22,4 @@ export class Main extends Component {
   }
 }
 
-export default Main
+export default Content
