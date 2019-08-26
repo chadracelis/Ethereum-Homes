@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-const showLandsForSale = (lands, buyLand) => {
+const showLandsForSale = (lands, buyLand, account) => {
   const landsForSale = lands.filter(land => land.forSale === true)
   return (
     landsForSale.map((land) => {
@@ -10,14 +10,18 @@ const showLandsForSale = (lands, buyLand) => {
           <td>{land.location}</td>
           <td>{window.web3.utils.fromWei(land.value.toString(), 'Ether')} Eth</td>
           <td>{land.owner}</td>
-          <td>
+          {
+            land.owner === account ? 
+            <td>
             <button 
               value={land.value}
               className="buyButton"
               onClick={ (event) => { buyLand(land.landID, event.target.value)} } 
             > Buy
             </button>
-          </td> 
+            </td> :
+            <td><strong>Your Listing</strong></td>
+          }
         </tr>
       )
     })
@@ -41,7 +45,7 @@ export class LandsForSale extends Component {
             </tr>
           </thead>
           <tbody id="landList">
-            { showLandsForSale(this.props.lands, this.props.buyLand) }
+            { showLandsForSale(this.props.lands, this.props.buyLand, this.props.account) }
           </tbody>
         </table>
       </div>
