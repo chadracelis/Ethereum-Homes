@@ -25,7 +25,7 @@ const showSoldLands = (lands, listLand, account, handleChange, value) => {
                 onClick={ (e) => { listLand(land.landID, window.web3.utils.toWei(e.target.value.toString(), 'Ether')) } } 
               > List Your Land
               </button>
-            </td> : <td></td>
+            </td> : <td><strong>Not Your Land</strong></td>
           } 
         </tr>
       )
@@ -49,7 +49,7 @@ class SoldLands extends Component {
     const { lands, listLand, account } = this.props;
     return (
       <div>
-        <h2>Sold Lands</h2>
+        <h2>Out of Market</h2>
         <table className="table">
           <thead>
             <tr>
