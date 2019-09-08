@@ -10,7 +10,6 @@ class App extends Component {
   async componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData()
-    console.log(this.state)
   }
 
   async loadWeb3() {
@@ -96,14 +95,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='app-container'>
         <Navbar account={this.state.account} />
-        <div classlocation='container-fluid mt-5'>
-          <div classlocation='row'>
-            <main role='main' classlocation='col-lg-12 d-flex'>
+        <div className='container-fluid mt-5'>
+          <div class1='row'>
+            <main role='main' className='col-lg-12 flex'>
             { 
               this.state.loading ? 
-                <p>Loading...</p> : 
+                <p>Loading...</p> :
                 <Content 
                   lands={this.state.lands} 
                   addLand={this.addLand} 
