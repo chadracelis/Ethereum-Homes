@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import home from '../home.png'
 
-export class Navbar extends Component {
+class Navbar extends Component {
   render() {
     const { account } = this.props;
     return (
