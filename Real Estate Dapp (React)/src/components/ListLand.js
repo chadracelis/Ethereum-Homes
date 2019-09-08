@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 
-export class ListLand extends Component {
+class ListLand extends Component {
 
   state = {
     id: null,
+    value: null
   }
 
   handleChange = (e) => {
