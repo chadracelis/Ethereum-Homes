@@ -178,3 +178,17 @@ a.full-button {
 .app-container {
   background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
+
+.input-listLand {
+  padding: 6px;
+  position: relative;
+  bottom: 2px;
+  border: solid;
+  border-color: lightgray;
+  border-radius: 5px;
+}
+
+.form-control {
+  border: solid;
+  border-color: lightgray;
+}
