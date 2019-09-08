@@ -4,19 +4,23 @@ import LandsForSale from './LandsForSale';
 import ListLand from './ListLand';
 import SoldLands from './SoldLands';
 
-export class Content extends Component {
-
+class Content extends Component {
   render() {
+    const { addLand, lands, buyLand, account, listLand } = this.props
     return (
       <div id="content">
         <p></p>
-        <AddLand addLand={this.props.addLand} />
+        {
+          account === '0x20207A621b882AB7129b4cF038Dc2686Bc4610b8' ? // modify to contract owner
+            <AddLand addLand={addLand} /> :
+            <div></div>
+        }
         <p>&nbsp;</p>
-        <LandsForSale lands={this.props.lands} buyLand={this.props.buyLand} account={this.props.account} />
+        <LandsForSale lands={lands} buyLand={buyLand} account={account} />
         <p>&nbsp;</p>
-        <ListLand listLand={this.props.listLand} />
+        <ListLand listLand={listLand} />
         <p>&nbsp;</p>
-        <SoldLands lands={this.props.lands} account={this.props.account} listLand={this.props.listLand} />
+        <SoldLands lands={lands} account={account} listLand={listLand} />
       </div>
     )
   }
