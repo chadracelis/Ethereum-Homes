@@ -11,7 +11,7 @@ const showLandsForSale = (lands, buyLand, account) => {
           <td>{window.web3.utils.fromWei(land.value.toString(), 'Ether')} Eth</td>
           <td>{land.owner}</td>
           {
-            land.owner === account ? 
+            land.owner !== account ? 
             <td>
             <button 
               value={land.value}
