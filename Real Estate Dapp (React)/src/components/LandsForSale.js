@@ -13,12 +13,12 @@ const showLandsForSale = (lands, buyLand, account) => {
           {
             land.owner !== account ? 
             <td>
-            <button 
-              value={land.value}
-              className="buyButton"
-              onClick={ (event) => { buyLand(land.landID, event.target.value)} } 
-            > Buy
-            </button>
+              <button 
+                value={land.value}
+                className="buyButton"
+                onClick={ (event) => { buyLand(land.landID, event.target.value)} } 
+              > Buy
+              </button>
             </td> :
             <td><strong>Your Listing</strong></td>
           }
@@ -28,7 +28,7 @@ const showLandsForSale = (lands, buyLand, account) => {
   )
 }
 
-export class LandsForSale extends Component {
+class LandsForSale extends Component {
 
   render() {
     return (
