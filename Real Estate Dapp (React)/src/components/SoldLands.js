@@ -11,12 +11,12 @@ const showSoldLands = (lands, listLand, account, handleChange, value) => {
           <td>{window.web3.utils.fromWei(land.value.toString(), 'Ether')} Eth</td>
           <td>{land.owner}</td>
           { land.owner === account ? 
-            <td>
+            <td className="td-listLand">
               <input
                 id="value"
                 onChange={handleChange}
                 type="text"
-                className="form-control"
+                className="input-listLand"
                 placeholder="Listing Price.."
                 required />
               <button 
@@ -70,4 +70,5 @@ class SoldLands extends Component {
 }
 
 export default SoldLands
+
 
