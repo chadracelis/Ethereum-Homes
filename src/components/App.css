@@ -133,9 +133,7 @@ a.full-button {
 }
 
 .title2 {
-  display: flex;
   font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif; font-size: 40px; 
-  justify-content: flex-start;
 }
 
 .input-listLand {
@@ -156,7 +154,6 @@ a.full-button {
 
 .add-form {
   display: flex;
-  flex-direction: row;
 }
 
 /* Land List */
@@ -174,7 +171,6 @@ a.full-button {
 .land {
   background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
   border-radius: 20px;
-  padding: 15px 0;
   margin: 15px;
   width: 400px;
   box-shadow: 8px 5px 5px 2px #9e9c9c26;
@@ -192,21 +188,21 @@ a.full-button {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 0 10px;
   text-align: center;
   font-size: 1.6rem;
   color: rgb(58, 58, 58);
   font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;  
-  font-style: normal; 
-  font-variant: normal; 
-  font-weight: 700; 
-  line-height: 40px;
+}
+
+.header h2 {
+  padding: 10px 0;
 }
 
 .image_div {
   width: 100%;
   height: 40%;
-  overflow: hidden;
+  overflow: scroll;
   margin: 0 auto;
   border-top: solid;
   border-bottom: solid;
@@ -223,10 +219,7 @@ a.full-button {
   justify-content: space-between;
   font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif; font-size: 30px; 
   margin: 20px;
-  padding: 20px;
-  font-style: normal; 
-  font-variant: normal; 
-  font-weight: 700; 
+  padding: 15px;
   line-height: 33px; 
   text-align: center;
   color: #565656;
@@ -238,7 +231,7 @@ a.full-button {
 
 .address {
   display: inline-block;
-  overflow: auto;
+  overflow: scroll;
 }
 
 .myLand {
