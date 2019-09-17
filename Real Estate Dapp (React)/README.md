@@ -1,3 +1,5 @@
+(Please check out the updated version in the main-repo)
+<p></p>
 <h2>Getting Started</h2> 
 <p></p>
 
