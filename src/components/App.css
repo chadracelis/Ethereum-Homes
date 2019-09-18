@@ -127,13 +127,14 @@ a.full-button {
 }
 
 /* Add Land & Sold Lands */
+.title2 {
+  font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif; font-size: 40px; 
+  text-align: center;
+}
+
 .form-control {
   border: solid;
   border-color: lightgray;
-}
-
-.title2 {
-  font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif; font-size: 40px; 
 }
 
 .input-listLand {
@@ -148,6 +149,12 @@ a.full-button {
 }
 
 /* Add Land */
+.add-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 .add-submit {
   margin: 10px;
 }
@@ -248,3 +255,5 @@ a.full-button {
   border-radius: 5px;
   font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif; font-size: 20px; 
 }
+
+
