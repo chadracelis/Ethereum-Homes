@@ -15,23 +15,25 @@ const showYourLands = (lands, account, listLand, handleChange, value) => {
           </div>
           <div className='content'>
             <h3>Value: {window.web3.utils.fromWei(land.value.toString(), 'Ether')} Eth</h3>
-            { land.forSale !== true ?
-              <div>
-                <input
-                  id="value"
-                  onChange={handleChange}
-                  type="text"
-                  className="input-listLand2"
-                  placeholder="Listing Price.."
-                  required />
-                <button 
-                  value={value}
-                  className="buyButton"
-                  onClick={ (e) => { listLand(land.landID, window.web3.utils.toWei(e.target.value.toString(), 'Ether')) } } 
-                > List Your Land
-                </button> 
-             </div> :
-             <strong className='myLand'>Listed</strong>
+            { 
+              land.forSale !== true ?
+                <div>
+                  <input
+                    id="value"
+                    onChange={handleChange}
+                    type="text"
+                    className="input-listLand2"
+                    placeholder="Listing Price.."
+                    required 
+                  />
+                  <button 
+                    value={value}
+                    onClick={ (e) => { listLand(land.landID, window.web3.utils.toWei(e.target.value.toString(), 'Ether')) } } 
+                  > List Your Land
+                  </button> 
+                </div> 
+              :
+                <strong className='myLand'>Listed</strong>
             }
           </div>
         </div>
