@@ -15,6 +15,7 @@ Other - </br>
 3. Open up Ganache and click 'Quick Start' </br>
 5. Go to your terminal, cd your folder and '<strong>truffle compile</strong>' to compile your contracts </br>
 6. Then migrate your contracts to deploy to our local blockchain aka ganache - '<strong>truffle migrate</strong>' </br>
+7. Go to src/content.js and replace the address under line 13 with the address you deployed with aka ganache (This will allow the 'Add Land' form to be only visible to the contract owner. </br>
 7. Go to your metamask extension and create a new network configured to your Ganache network. In that network, import a new account w/ one of the private keys inside your Ganache. </br>
 8. '<strong>npm start</strong>' to load up the project on your local browser. (make sure you're on your ganache network in your metamask extension) </br>
 
